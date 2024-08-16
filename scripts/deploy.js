@@ -9,7 +9,7 @@ const privKey = process.env.WALLET_PRIVATE_KEY;
 
 const deploy = async () => {
     const wolfContract = new web3.eth.Contract(wolf_nft_json.abi);
-    deployTx = wolfContract.deploy({
+    deployTx = wolfContract.deploy({ 
         data: wolf_nft_json.bytecode,
         arguments: []
     });
